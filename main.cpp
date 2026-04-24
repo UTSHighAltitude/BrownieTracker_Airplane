@@ -296,6 +296,7 @@ void sendTelemetry() {
 //  BATTERY
 // ─────────────────────────────────────────────────────────────
 uint16_t readBatteryMV() {
+  delay(5);
   uint32_t sum = 0;
   for (int i = 0; i < 8; i++) {
     sum += analogRead(BAT_PIN);
